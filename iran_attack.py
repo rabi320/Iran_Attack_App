@@ -7,7 +7,7 @@ st.title("Iran's Attack on Israel 14/04/2024")
 
 # Create DataFrame
 final_df = pd.read_parquet('mapping_data.parquet')
-
+final_df['Time'] = final_df['Time'].dt.time
 # Convert latitude and longitude to float
 final_df['Latitude'] = final_df['Latitude'].astype(float)
 final_df['Longitude'] = final_df['Longitude'].astype(float)
